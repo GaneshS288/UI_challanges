@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --social-backdrop: rgb(221, 229, 249);
+    --social-card: rgb(72, 104, 217);
+    --input-background: rgb(124, 146, 220);
+    --card-border-radius : 1.2rem;
+    --circle-border-radius: 50%;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    background-color: rgb(243, 248, 254);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+main {
+    flex-grow: 1;
+    display: grid;
+    place-content: center;
+    grid-template-columns: minmax(auto, 800px);
+    grid-template-rows: 400px;
+}
+
+.social-container {
+    position: relative;
+    background-color: var(--social-backdrop);
+    padding: 1em;
+    border-radius: var(--card-border-radius);
+    display: flex;
+}
+
+.social-card {
+    background-color: var(--social-card);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    flex: 1;
+    border-radius: var(--card-border-radius);
+}
+
+.social-heading {
+    color: white;
+    font-size: 2.4rem;
+}
+
+.social-info {
+    color: whitesmoke;
+    max-width: 35ch;
+}
+
+.social-form {
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 50px;
+}
+
+.social-form__email {
+    flex: 1;
+    border-radius: 2rem;
+    border: none;
+    background-color: var(--input-background);
+    padding-left: 1rem;
+    border: 1px solid var(--social-backdrop);
+    font-size: 1rem;
+}
+
+.social-form__email::placeholder {
+    color: white;
+}
+
+.social-form__email:focus {
+    outline: 2px solid gold;
+}
+
+.social-form__submit {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 10%;
+    left: 89%;
+    border-radius: var(--circle-border-radius);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-form__submit:hover {
+    border: 2px solid var(--social-card);
+}
+
+.social-form__submit > img {
+    width: 75%;
+}
+
+.social-pics-container {
+    display: flex;
+    gap: 1em;
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: fit-content;
+}
+
+.profile-pic {
+    width: 80px;
+    height: 80px;
+    border: 7px solid white;
+    border-radius: var(--circle-border-radius);
+}
+
+.profile-pic > img {
+    border-radius: var(--circle-border-radius);
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+
